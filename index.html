@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Start Head -->
+  <head>
+
+		<title>Clean Green Australia | How green is Australia's energy supply?</title>
+    <!-- add icon link -->
+    <link rel = "icon" href ="assets/icon/clean_energy.webp" type = "image/x-icon">
+		<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		<meta name="description" content="COS30045 - Data Visualisation"/>
+		<meta name="keywords" content="Australian Energy Sustainability"/>
+		<meta name="authors" content="James Sanders 102810162 | Riley Parsons 103056271"/>
+    <meta name="Group Number" content="8">
+
+    <!-- CSS Scripts -->
+		<link rel="stylesheet" href="assets/css/main.css" type="text/css">
+
+    <!-- D3 JS Script -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    
+  </head>
+
+  <!-- Start Body -->
+  <body>
+    <h1>CLEAN <span id="green">GREEN</span> AUSTRALIA</h1>
+    <h2>How green is Australia's energy supply?</h2>
+
+    <!-- Outer Wrapper -->
+    <div id="wrapper">
+
+      <!-- Chart Description -->
+      <div id="instructions">
+        <p id="infoHeader"></p>
+        <p><span id="infoPara1" class="info"></span></p>
+        <p><span id="infoPara2" class="info"></span></p>
+      </div>
+
+      <!-- Outer Wrapper -->
+      <div id="inner-wrapper">
+
+        <!-- Drop Down Selector -->
+        <div id="selector">
+          <select id="selection" name="Select Visualisation:">
+            <option value="Choropleth" selected="">Choropleth Map of Australia</option>
+            <option value="Sankey">Sankey Diagram</option>
+            <option value="Line">Line Chart</option>
+          </select>
+        </div>
+
+        <!-- Map Key -->
+        <div id="map-key" class="hidden"> 
+          <div id="key-header"></div> 
+          <div class="key-block" id="mk-1"> 
+            <div class="key-color-block" style="background-color: rgb(238, 238, 238);"></div> 
+            <div class="key-value">0k</div> 
+          </div> 
+          <div class="key-block" id="mk-2"> 
+            <div class="key-color-block" style="background-color: rgb(230, 237, 216);"></div> 
+            <div class="key-value">20</div> 
+          </div> 
+          <div class="key-block" id="mk-3"> 
+            <div class="key-color-block" style="background-color: rgb(202, 219, 166);"></div> 
+            <div class="key-value">40</div> 
+          </div> 
+          <div class="key-block" id="mk-4"> 
+            <div class="key-color-block" style="background-color: rgb(157, 178, 112);"></div> 
+            <div class="key-value">60</div> 
+           </div> 
+          <div class="key-block" id="mk-5"> 
+            <div class="key-color-block" style="background-color: rgb(94, 132, 58);"></div> 
+            <div class="key-value">80</div> 
+          </div> 
+          <div class="key-block" id="mk-6"> 
+            <div class="key-color-block" style="background-color: rgb(60, 96, 46);"></div> 
+            <div class="key-value">100</div> 
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <br/><br/>
+    
+    <!-- D3 Viz -->
+    <div id="viz" class="D3"></div>
+    <br/><br/>
+    <!-- Viz Buttons -->
+    <div id="viz-btns"></div>
+
+    <!-- Viz Tool-tip-->
+    <div id="tooltip" class="hidden">
+      <p><span id="values"></span></p>
+    </div>
+
+    <!-- Supportive Text -->
+    <div id="added-info">
+      <span id='supporting-text-1' class='supporting-info'></span>
+      <span id='supporting-text-2' class='supporting-info'></span>
+    </div>
+
+    <!-- Footer -->
+    <footer>Created by <span id="James"><a href="../labs/James/index.html" target="_blank">James Sanders</a></span> & Riley Parsons | 02-Jun-2022</footer>
+    
+    <!-- JS Script -->
+    <script src="assets/js/main.js"></script>
+    
+  </body>
+</html>
